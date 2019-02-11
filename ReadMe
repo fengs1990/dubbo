@@ -1,0 +1,13 @@
+dubbo官方demo
+包含三个模块
+    dubbo-api：公用模块，里面存放生产者和消费者都会用到的公用类（如：接口、实体类等）
+    dubbo-produce：生产者模块，用于产生服务，并向zookeeper中进行服务注册操作。
+    dubbo-consumer-one：消费者模块，用于消费生产者注册的服务，同样需要配置注册中心，然后向注册中心获取注册服务类信息。
+
+启动
+    手动找到zookeeper的bin目录，执行zkServer.sh或zkServer.cmd方法启动zookeeper。
+    进入dubbo-produce生产者模块中，找到ProducerRun类，直接运行main方法，向zookeeper中注册一个服务信息。
+    进入dubbo-consumer-one消费者模块中，找到ConsumerRun类，直接运行main方法，获取zookeeper中注册的服务类，并执行类中方法。
+
+总结：
+
